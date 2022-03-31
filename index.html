@@ -14,6 +14,11 @@
     </header>
       <ul class="book-list">
         <li>
+          <article class="book add-book">
+            <button class="add-book__button">+</button>
+          </article>
+        </li>
+        <li>
           <article class="book">
             <div class="book__buttons">
               <button class="book__button button__edit"></button>
@@ -24,7 +29,7 @@
               <p class="book__author">A. U. Thor</p>
               <p class="book__page-count">451</p>
             </div>
-            <p class="book__isread">Read</>
+            <p class="book__isread">Read</p>
           </article>
         </li>
               <li>
@@ -49,6 +54,31 @@
         </li>
       </ul>
     <footer class='footer'></footer>
+  </div>
+
+  <div class="new-book-window new-book-window--isshown">
+    <form class="new-book-form" action="">
+      <button class="new-book-form__close-form-btn" type="button">x</button>
+      <ul>
+        <li>
+          <label class="new-book-form__label"for="title">Title</label>
+          <input class="new-book-form__input" id="title" type="text">
+        </li>
+        <li>
+          <label class="new-book-form__label"for="author">Author</label>
+          <input class="new-book-form__input" id="author" type="text">
+        </li>
+        <li>
+          <label class="new-book-form__label"for="page-count">Number of pages:</label>
+          <input class="new-book-form__input" id="page-count" type="number">
+        </li>
+        <li>
+          <label class="new-book-form__label"for="page-count">Have read?</label>
+          <input class="new-book-form__input" id="page-count" type="checkbox">
+        </li>
+      </ul>
+      <button class="new-book-form__add-btn" type="button">Add</button>
+    </form>
   </div>
   
 </body>
