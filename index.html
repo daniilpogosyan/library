@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Library</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
   <div class="content">
@@ -18,63 +19,29 @@
             <button class="add-book__button">+</button>
           </article>
         </li>
-        <li>
-          <article class="book">
-            <div class="book__buttons">
-              <button class="book__button button__edit"></button>
-              <button class="book__button button__delete"></button>
-            </div>
-            <div class="book__info">
-              <h2 class="book__title">The Title</h2>
-              <p class="book__author">A. U. Thor</p>
-              <p class="book__page-count">451</p>
-            </div>
-            <p class="book__isread">Read</p>
-          </article>
-        </li>
-              <li>
-          <article class="book">
-            <div class="book__info">
-              <h3 class="book__title">The Title</h3>
-              <p class="book__author">A. U. Thor</p>
-              <p class="book__page-count">451</p>
-            </div>
-            <p class="book__isread">Read</p>
-          </article>
-        </li>
-              <li>
-          <article class="book">
-            <div class="book__info">
-              <h3 class="book__title">The Title</h3>
-              <p class="book__author">A. U. Thor</p>
-              <p class="book__page-count">451</p>
-            </div>
-            <p class="book__isread">Read</p>
-          </article>
-        </li>
       </ul>
     <footer class='footer'></footer>
   </div>
 
-  <div class="new-book-window new-book-window--isshown">
+  <div class="new-book-window">
     <form class="new-book-form" action="">
       <button class="new-book-form__close-form-btn" type="button">x</button>
       <ul>
         <li>
-          <label class="new-book-form__label"for="title">Title</label>
-          <input class="new-book-form__input" id="title" type="text">
+          <label class="new-book-form__label" for="title">Title</label>
+          <input name="title" class="new-book-form__input" id="title" type="text">
         </li>
         <li>
-          <label class="new-book-form__label"for="author">Author</label>
-          <input class="new-book-form__input" id="author" type="text">
+          <label class="new-book-form__label" for="author">Author</label>
+          <input name="author" class="new-book-form__input" id="author" type="text">
         </li>
         <li>
-          <label class="new-book-form__label"for="page-count">Number of pages:</label>
-          <input class="new-book-form__input" id="page-count" type="number">
+          <label class="new-book-form__label" for="page-count">Number of pages:</label>
+          <input name="pageCount" class="new-book-form__input" id="page-count" type="number">
         </li>
         <li>
-          <label class="new-book-form__label"for="page-count">Have read?</label>
-          <input class="new-book-form__input" id="page-count" type="checkbox">
+          <label class="new-book-form__label" for="have-read">Have read?</label>
+          <input name="isRead" class="new-book-form__input" id="have-read" type="checkbox">
         </li>
       </ul>
       <button class="new-book-form__add-btn" type="button">Add</button>
