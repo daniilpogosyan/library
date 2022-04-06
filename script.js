@@ -30,7 +30,7 @@ const addBookBtn = document.querySelector(".new-book-form__add-btn");
 addBookBtn.addEventListener('click', () => {
   const book = getBookfromForm();
   addBookToDB(book, booksDB);
-  addBookToDOM(book);
+  addDOMBookToList(book);
   hideNewBookForm();
 })
 
@@ -42,6 +42,9 @@ function getBookfromForm() {
     book[input.getAttribute("name")] = input.value;
   });
   book.id = Math.floor((Math.random() * 100000));
+
+  const isReadStatus = form.querySelector('.new-book-form__input[name="isRead"]').checked;
+  book.isRead = isReadStatus? 'Read' : 'Not Read';
   return book;
 }
 function addBookToDB(book, DB) {
@@ -59,6 +62,7 @@ function createDOMBook (book) {
   const DOMBook = document.createElement("li");
   DOMBook.classList.add("book-wrapper");
   DOMBook.dataset.id = book.id;
+  const isRead = 
   DOMBook.innerHTML = `
           <article class="book">
             <div class="book__buttons">
